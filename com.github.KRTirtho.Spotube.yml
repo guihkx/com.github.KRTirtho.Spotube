@@ -139,10 +139,12 @@ modules:
 - name: spotube
   buildsystem: simple
   build-commands:
+  - ls -laR
   - install -Dm644 spotube/com.github.KRTirtho.Spotube.appdata.xml /app/share/appdata/com.github.KRTirtho.Spotube.appdata.xml
   - desktop-file-edit spotube/spotube.desktop --set-key=Exec --set-value="spotube
     %u" --set-icon=com.github.KRTirtho.Spotube
   - install -Dm644 spotube/spotube-logo.png /app/share/icons/hicolor/128x128/apps/com.github.KRTirtho.Spotube.png
+  - install -Dm644 spotube/spotube-logo.png /app/share/icons/hicolor/128x128/apps/status/com.github.KRTirtho.Spotube-tray.png
   - install -Dm644 spotube/spotube.desktop /app/share/applications/com.github.KRTirtho.Spotube.desktop
   - install -dm755 /app/bin /app/spotube
   - cp -R spotube/ /app
@@ -150,5 +152,5 @@ modules:
   sources:
   - type: archive
     dest: spotube
-    url: https://github.com/KRTirtho/spotube/releases/download/v3.4.0/spotube-linux-3.4.0-x86_64.tar.xz
-    sha256: bd32b7696335025cb7c82344a504b4cbee1d1d38ec9f655624023d4a4e75f2b8 
+    url: https://0x0.st/H6ke.tar.xz
+    sha256: 33c80c8dc7417ad58f09bfdada996ecb246edfeb9ff0ca2b97a5d81de658850d
